@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="confirmation">
+        <h1 id="success-message">Datos enviados con éxito</h1>
+        <p id="activation-msg">Su activación se hará efectiva dentro de las próximas 48 horas.</p>
+    </div>
+    <script>
+        const translations = {
+            "es": {
+                "success-message": "Datos enviados con éxito",
+                "activation-msg": "Su activación se hará efectiva dentro de las próximas 48 horas."
+            },
+            "it": {
+                "success-message": "Dati inviati con successo",
+                "activation-msg": "La tua attivazione sarà effettiva entro le prossime 48 ore."
+            }
+        };
+
+        window.onload = () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang') || "es";
+            document.getElementById("success-message").textContent = translations[lang]["success-message"];
+            document.getElementById("activation-msg").textContent = translations[lang]["activation-msg"];
+        };
+    </script>
+</body>
+</html>

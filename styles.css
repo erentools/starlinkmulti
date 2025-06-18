@@ -1,0 +1,37 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.form-container, .confirmation {
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-top: 50px;
+}
+
+input, button, select {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 80%;
+}
+
+button {
+    background-color: #4d91ff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#progressBar {
+    width: 80%;
+    height: 20px;
+}
